@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_pagi"
+    tools:context=".HomeActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/shugro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/home_logo" />
+
+    <TextView
+        android:id="@+id/shugro"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/home_button_background"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="Shugro"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/kubro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/kubro"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/home_button_background"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="Kubro"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_quote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shugro" />
+
+    <TextView
+        android:id="@+id/text_quote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:maxWidth="300dp"
+        android:text="Maka bersabarlah kamu terhadap apa yang mereka katakan dan bertasbihlah sambil memuji tuhanmu sebelum terbit matahari dan sebelum terbenam(nya) (QS. Qaf: 39)"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kubro" />
+
+</android.support.constraint.ConstraintLayout>

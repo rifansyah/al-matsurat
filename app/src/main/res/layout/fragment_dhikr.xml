@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DhikrFragment">
+
+    <ScrollView
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/webview"/>
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textSize="22sp"-->
+                <!--android:textColor="#3C3C3C"-->
+                <!--android:fontFamily="@font/uthmani"-->
+                <!--android:text="سۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ 〔١〕  \nلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَٰلَمِينَ 〔٢〕 ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ 〔٣〕 مَٰلِكِ يَوۡمِ ٱلدِّينِ 〔٤〕 إِيَّاكَ نَعۡبُدُ وَإِيَّاكَ نَسۡتَعِينُ 〔٥〕 ٱهۡدِنَا ٱلصِّرَٰطَ ٱلۡمُسۡتَقِيمَ 〔٦〕 صِرَٰطَ ٱلَّذِينَ أَنۡعَمۡتَ عَلَيۡهِمۡ غَيۡرِ ٱلۡمَغۡضُوبِ عَلَيۡهِمۡ وَلَا ٱلضَّآلِّينَ 〔٧〕"/>-->
+
+            <ImageView
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:src="@drawable/divider"/>
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="13sp"-->
+                <!--android:textColor="#3C3C3C"-->
+                <!--android:text="1. dengan menyebut nama Allah yang Maha Pemurah lagi Maha Penyayang.-->
+<!--\n2. segala puji bagi Allah, Tuhan semesta alam.-->
+<!--\n3. Maha Pemurah lagi Maha Penyayang.-->
+<!--\n4. yang menguasai di hari Pembalasan.-->
+<!--\n5. hanya Engkaulah yang Kami sembah, dan hanya kepada Engkaulah Kami meminta pertolongan.-->
+<!--\n6. Tunjukilah Kami jalan yang lurus.-->
+<!--\n7. (yaitu) jalan orang-orang yang telah Engkau beri nikmat kepada mereka; bukan (jalan) mereka yang dimurkai dan bukan (pula jalan) mereka yang sesat."/>-->
+
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/webview_translate"></WebView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+        <!-- Here is the list. Since we are using a ListActivity, we
+             have to call it "@android:id/list" so ListActivity will
+             find it -->
+        <ListView android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawSelectorOnTop="false"/>
+
+        <!-- Here is the view to show if the list is emtpy -->
+        <TextView android:id="@android:id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="No items."/>
+
+    </FrameLayout>
+
+
+</FrameLayout>
