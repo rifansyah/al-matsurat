@@ -21,6 +21,7 @@ import java.util.List;
  */
 public class DhikrFragment extends ListFragment {
     private Dhikr dhikr;
+    private int fontSize;
 
     public static final String[] sCheeseStrings = {
             "Abbaye de Belloc", "Abbaye du Mont des Cats", "Abertam", "Abondance", "Ackawi",
@@ -29,10 +30,6 @@ public class DhikrFragment extends ListFragment {
             "Ami du Chambertin", "Anejo Enchilado", "Anneau du Vic-Bilh", "Anthoriro", "Appenzell",
             "Aragon"
     };
-
-    public DhikrFragment() {
-        // Required empty public constructor
-    }
 
     static DhikrFragment newInstance(Dhikr dhikr) {
         DhikrFragment df = new DhikrFragment();
@@ -72,7 +69,7 @@ public class DhikrFragment extends ListFragment {
                 "}" +
                 "body {" +
                 "    font-family: MyFont;" +
-                "    font-size: 23px;" +
+                "    font-size: 24px;" +
                 "    direction:rtl;" +
                 "    text-align: justify;" +
                 "}" +
@@ -93,7 +90,7 @@ public class DhikrFragment extends ListFragment {
                 "        list-style-type: none;" +
                 "        padding:0; }" +
                 "body {" +
-                "    font-size: 12px;" +
+                "    font-size: 14px;" +
                 "    text-align: justify;" +
                 "}" +
                 "</style>" +

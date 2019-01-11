@@ -24,12 +24,9 @@ public class DhikrActivity extends AppCompatActivity implements View.OnClickList
     private DatabaseAccess databaseAccess;
     private LinearLayout toolbar;
     private String type;
-    private ImageView prev;
-    private ImageView next;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dhikr);
 
@@ -49,20 +46,11 @@ public class DhikrActivity extends AppCompatActivity implements View.OnClickList
         viewPager = (ViewPager)findViewById(R.id.pager);
         surah = (TextView)findViewById(R.id.surah);
         count = (TextView)findViewById(R.id.count);
-        prev = (ImageView)findViewById(R.id.prev);
-        next = (ImageView)findViewById(R.id.next);
-
-        if (isNight()) {
-            toolbar.setBackgroundColor(getResources().getColor(R.color.colorPrimaryNight));
-        }
 
         viewPager.setAdapter(adapter);
 
         surah.setText("Taawudz");
         count.setText("1x");
-
-        prev.setOnClickListener(this);
-        next.setOnClickListener(this);
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -92,12 +80,7 @@ public class DhikrActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.prev:
-                viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
-                break;
-            case R.id.next:
-                viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
-                break;
+
         }
     }
 
@@ -105,46 +88,5 @@ public class DhikrActivity extends AppCompatActivity implements View.OnClickList
         super.onDestroy();
         databaseAccess.close();
         finish();
-    }
-
-    public void setTheme() {
-        SimpleDateFormat parser = new SimpleDateFormat("HH:mm");
-        Date twelve = null;
-        try {
-            twelve = parser.parse("12:00");
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            Date userDate = new Date();
-            Date now = parser.parse(parser.format(userDate));
-            if (now.after(twelve)) {
-                setTheme(R.style.OverlayPrimaryColorBlue);
-            }
-        } catch (ParseException e) {
-            // Invalid date was entered
-        }
-    }
-
-    public boolean isNight() {
-        SimpleDateFormat parser = new SimpleDateFormat("HH:mm");
-        Date twelve = null;
-        try {
-            twelve = parser.parse("12:00");
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            Date userDate = new Date();
-            Date now = parser.parse(parser.format(userDate));
-            if (now.after(twelve)) {
-                return true;
-            }
-        } catch (ParseException e) {
-            // Invalid date was entered
-        }
-        return false;
     }
 }

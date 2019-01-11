@@ -11,49 +11,39 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:orientation="horizontal"
-        android:background="@color/colorPrimary"
-        android:gravity="center_vertical">
-
-        <ImageView
-            android:id="@+id/prev"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            app:srcCompat="@drawable/button_back"/>
+        android:orientation="vertical"
+        android:background="@drawable/top_bar"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/surah"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Al-Fatihah"
-            android:paddingRight="16dp"
-            android:textColor="#fff"
-            android:textSize="16sp"/>
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"/>
 
         <TextView
             android:id="@+id/count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="1x"
-            android:textColor="#fff"
-            android:textSize="16sp"/>
+            android:textSize="12sp"/>
 
-        <ImageView
-            android:id="@+id/next"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            app:srcCompat="@drawable/button_next"/>
 
     </LinearLayout>
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
 
 </LinearLayout>

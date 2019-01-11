@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="475dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    android:layout_gravity="center"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Al - Matsurat"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Al Ma’tsurat adalah kitab kecil berupa kumpulan dzikir dan doa yang disusun oleh Al Imam Hasan Al Banna Rahimahullah yang berisi doa-doa yang berasal dari Al Quran dan As Sunnah. Boleh dikatakan, dalam  era penerbitan modern, dibanding kitab sejenisnya, Al Ma’tsurat adalah kitab yang paling luas penyebarannya di dunia Islam  dan   paling banyak jumlah eksemplarnya dengan naik cetak berkali-kali."
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="'Maka ingatlah pada-Ku, maka Aku akan mengingat kalian'"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="4dp"
+        android:text="(QS. Al Baqarah: 152)"/>
+
+</LinearLayout>
